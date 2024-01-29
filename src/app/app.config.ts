@@ -2,10 +2,11 @@ import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { httpConfig } from './config/httpclient.config';
+import { httpConfigProvider } from './config/httpclient.config';
+import { provideHttpClient } from '@angular/common/http';
 
 
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), httpConfig]
+  providers: [provideRouter(routes), provideHttpClient(), httpConfigProvider]
 };

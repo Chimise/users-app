@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { UserdetailsComponent } from './pages/userdetails/userdetails.component';
 import { UserslistComponent } from './pages/userslist/userslist.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 
 export const routes: Routes = [{
     path: "users/:id",
@@ -11,8 +12,7 @@ export const routes: Routes = [{
     component: UserslistComponent
 }, {
     path: "",
-    redirectTo: "/users",
-    pathMatch: 'full'
+    component: HomepageComponent
 }, {
     path: "**",
     component: NotfoundComponent
