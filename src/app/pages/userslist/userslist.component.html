@@ -1,1 +1,20 @@
-<p>All Users</p>
+<app-container [class]="'mt-8'">
+    <h1 class="mb-3">Users List</h1>
+    <app-search [(search)]="searchValue" />
+</app-container>
+<app-container class="mt-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-14">
+        @if(loading) {
+        <p>Users fetching</p>
+        }@else if (error) {
+        <p>{{error}}</p>
+        }@else{
+        @for (user of filterUsers(); track user.id) {
+        <app-usercard [user]="user" />
+        }
+        @empty {
+        <p>No User found</p>
+        }
+        }
+    </div>
+</app-container>
