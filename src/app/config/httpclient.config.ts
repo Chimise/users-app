@@ -1,22 +1,26 @@
 import { InjectionToken, Provider } from "@angular/core";
 
-interface HttpConfig {
+export interface HttpConfig {
     baseUrl: string;
     defaultHeaders: Record<string, string>,
+    withBase(url: string): string;
 }
 
-const BASE_URL = new InjectionToken<HttpConfig>("HTTP_CONFIG");
+export const HTTP_CONFIG = new InjectionToken<HttpConfig>("HTTP_CONFIG");
 
 const httpConfigFactory = (): HttpConfig => {
-    const url = "https://typicode.com";
+    const url = "https://jsonplaceholder.typicode.com/";
     return {
         baseUrl: url, defaultHeaders: {
             "Content-Type": "application/json"
+        },
+        withBase(url: string) {
+            return this.baseUrl + url;
         }
     }
 }
 
-export const httpConfig: Provider = {
-    provide: BASE_URL,
+export const httpConfigProvider: Provider = {
+    provide: HTTP_CONFIG,
     useFactory: httpConfigFactory
 }
