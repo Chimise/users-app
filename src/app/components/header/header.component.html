@@ -1,0 +1,15 @@
+<header class="w-full h-14 shadow-md">
+    <app-container [class]="'flex items-center justify-between h-full'">
+        <h2>Users App</h2>
+        <nav class="flex items-center space-x-4">
+            <a class="text-black uppercase font-semibold" routerLink="/" routerLinkActive="text-blue-700"
+               ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{exact: true}">
+                Home
+            </a>
+            <a class="text-black uppercase" routerLink="/users" routerLinkActive="text-blue-700"
+               [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page">
+                Users
+            </a>
+        </nav>
+    </app-container>
+</header>
