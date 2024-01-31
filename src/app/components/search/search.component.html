@@ -1,6 +1,7 @@
 <div class="flex items-center space-x-2">
     <div class="flex items-center relative h-12 flex-1 group md:w-1/2 md:flex-initial">
         <input type="text" name="search"
+               placeholder="Search for users"
                class="w-full inline-block h-full border border-gray-300 pl-9 rounded-md focus:border-gray-500"
                [(ngModel)]="search" (ngModelChange)="handleChange($event)" />
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -9,5 +10,24 @@
                   d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
         </svg>
     </div>
-    <span>Filter</span>
+    <div class="relative">
+        <div>
+            <button class="h-10 w-10 relative inline-flex items-center justify-center bg-gray-100 rounded-md"
+                    (click)="handleVisibilityToggle()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor"
+                     class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+                </svg>
+            </button>
+        </div>
+        <div [ngClass]="{'absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-primary ring-opacity-5 focus:outline-none transition': true, 'ease-out duration-100 opacity-100 scale-100': isMenuVisible, 'ease-in duration-75 opacity-0 scale-95': !isMenuVisible}"
+             role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+
+            <app-filter *ngFor="let filter of filters; trackBy trackByFn; last as last"
+                        [name]="filter.name"
+                        [checked]="filter.checked" [isLast]="last" (checkedChange)="handleFilterChange($event)" />
+        </div>
+    </div>
 </div>
