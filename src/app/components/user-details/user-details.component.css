@@ -1,21 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-
 body{
     color: #333;
 }
 
 nav{
     display: flex;
-    /* align-items:center; */
-    /* justify-content:start; */
-    /* justify-content:space-between; */
+    align-items:center;
+    justify-content:space-between;
     background: #f9f9f9;
-    /* text-align: center; */
-    /* overflow: hidden; */
+    text-align: center;
+    overflow: hidden;
 }
 
 nav .logo{
@@ -29,7 +22,6 @@ nav .logo{
     display: flex;
     /* margin: 0 10px; */
     padding: 10px;
-    margin-right: 10px;
 }
 
 .links ul{
@@ -40,7 +32,6 @@ nav .logo{
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    margin-right: 10px;
 }   
 
 .bg-image{
@@ -57,6 +48,17 @@ nav .logo{
     flex-direction: row;
     justify-content:space-between; 
     padding: 20px;
+}
+
+
+@media (max-width: 992px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
 }
 
 .left{
@@ -80,11 +82,16 @@ nav .logo{
     display: flex;
     flex-direction: column;
     padding-left: 30px;
-    /* margin-top: -40px; */
 }
 
 .inner-company-details{
     display: flex;
+}
+
+@media (max-width: 992px){
+    .inner-company-details{
+        margin-bottom: 30px;
+    }
 }
 
 .company-title{
@@ -95,6 +102,14 @@ nav .logo{
     margin-right: 10px;
     width: 70%;
     height: 50%;
+}
+
+@media (max-width: 992px) {
+    .company-image img{
+        margin-right: 10px;
+        width: 80%;
+        height: 100%;
+    }
 }
 
 .company-details{
@@ -111,4 +126,14 @@ nav .logo{
 .right{
     width: 50%;
     padding: 20px;
+}
+
+.about{
+    margin-bottom: 30px;
+}
+
+@media (max-width: 992px){
+    .about{
+        margin-bottom: 40px;
+    }
 }
