@@ -1,0 +1,139 @@
+body{
+    color: #333;
+}
+
+nav{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    background: #f9f9f9;
+    text-align: center;
+    overflow: hidden;
+}
+
+nav .logo{
+    text-decoration: none;
+    list-style: none;
+    padding: 10px;
+    color: #333;
+}
+
+.links{
+    display: flex;
+    /* margin: 0 10px; */
+    padding: 10px;
+}
+
+.links ul{
+    list-style: none;
+}
+
+.links a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}   
+
+.bg-image{
+    height: 30vh;
+    width: 100vw;
+    background-image: url("/images/pexels-jaime-reimer-3794940.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between; 
+    padding: 20px;
+}
+
+
+@media (max-width: 992px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.profile{
+    position: absolute;
+    margin: -100px 0 0 120px;
+    text-align: center;
+}
+
+.profile a{
+    text-decoration: none;
+}
+
+.company{
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.inner-company-details{
+    display: flex;
+}
+
+@media (max-width: 992px){
+    .inner-company-details{
+        margin-bottom: 30px;
+    }
+}
+
+.company-title{
+    margin-bottom: 20px;
+}
+
+.company-image img{
+    margin-right: 10px;
+    width: 70%;
+    height: 50%;
+}
+
+@media (max-width: 992px) {
+    .company-image img{
+        margin-right: 10px;
+        width: 80%;
+        height: 100%;
+    }
+}
+
+.company-details{
+    margin-left: -20px;
+}
+
+.profile img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #f9f9f9;
+}
+
+.right{
+    width: 50%;
+    padding: 20px;
+}
+
+.about{
+    margin-bottom: 30px;
+}
+
+@media (max-width: 992px){
+    .about{
+        margin-bottom: 40px;
+    }
+}
