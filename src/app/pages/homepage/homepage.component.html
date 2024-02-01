@@ -61,3 +61,19 @@
         </app-learning-card>
     </div>
 </section>
+
+
+<!--n-->
+<section class="py-12 bg-gray-300 mt-40">
+        <div class="max-w-7xl mx-auto px-8 py-4 space-y-16">
+            <h2 class="font-heading font-bold text-primary capitalize text-4xl text-center">
+                Meet the team
+            </h2>
+    
+            <div class="grid md:grid-cols-3 gap-16">
+                @for(team of teams; track team.githubLink) {
+                    <app-team-card [imageUrl]="team.imageUrl" [githubLink]="team.githubLink" [name]="team.name" />
+                }
+            </div>
+        </div>
+</section>
