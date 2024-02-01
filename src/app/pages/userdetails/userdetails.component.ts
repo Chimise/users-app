@@ -27,7 +27,6 @@ export class UserdetailsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params["id"];
-
     this.subscription = this.userService.getUserById(this.id).subscribe({
       next: (user) => this.user = user,
       error: () => this.error = "An error occurred, please try again",
