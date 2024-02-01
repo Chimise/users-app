@@ -40,12 +40,11 @@ You need to have the following installed on your machine before setting up the a
 
 ## Screenshots
 <div style="display: flex; justify-content: center;">
-    <img src="/src/assets/img/homepage.PNG" alt="landing-page" style="width: 400px; height: 300px; margin-right: 10px;">
-    <img src="/src/assets/img/user-details.PNG" alt="users-page" style="width: 400px; height: 300px; margin-right: 10px;">
-    <img src="/src/assets/img/user.PNG" alt="user" style="width: 400px; height: 300px; margin-right: 10px;"> 
-    <img src="/src/assets/img/team-image.PNG" alt="user" style="width: 400px; height: 300px; margin-right: 10px;"> 
+    <img src="src/assets/img/homepage.png" alt="landing-page" style="width: 400px; height: 300px; margin-right: 10px;">
+    <img src="src/assets/img/user-details.png" alt="users-page" style="width: 400px; height: 300px; margin-right: 10px;">
+    <img src="src/assets/img/user-view.png" alt="user" style="width: 400px; height: 300px; margin-right: 10px;"> 
+    <img src="src/assets/img/team-image.png" alt="user" style="width: 400px; height: 300px; margin-right: 10px;"> 
 </div>
-
 
 ## Installation
 #### Setup Instruction
