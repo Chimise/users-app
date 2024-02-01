@@ -1,7 +1,7 @@
 <app-container [class]="'mt-8'">
     <app-search [search]="searchValue" (searchChange)="handleSearchChange($event)" />
 </app-container>
-<app-container class="mt-20">
+<app-container class="my-20">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
         @if(loading) {
         @for(placeholder of placeholders; track $index) {
