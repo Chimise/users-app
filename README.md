@@ -40,9 +40,10 @@ You need to have the following installed on your machine before setting up the a
 
 ## Screenshots
 <div style="display: flex; justify-content: center;">
-    <img src="/src/assets/img/landing_page.png" alt="landing-page" style="width: 400px; height: 300px; margin-right: 10px;">
-    <img src="/src/assets/img/users_page.png" alt="users-page" style="width: 400px; height: 300px; margin-right: 10px;">
-    <img src="/src/assets/img/user.png" alt="user" style="width: 400px; height: 300px; margin-right: 10px;"> 
+    <img src="/src/assets/img/homepage.PNG" alt="landing-page" style="width: 400px; height: 300px; margin-right: 10px;">
+    <img src="/src/assets/img/user-details.PNG" alt="users-page" style="width: 400px; height: 300px; margin-right: 10px;">
+    <img src="/src/assets/img/user.PNG" alt="user" style="width: 400px; height: 300px; margin-right: 10px;"> 
+    <img src="/src/assets/img/team-image.PNG" alt="user" style="width: 400px; height: 300px; margin-right: 10px;"> 
 </div>
 
 
@@ -80,7 +81,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Collaborators
 1. Chisom .P. Nnakude
-- GitHub: [chimise](https://github.com/lordlughas)
+- GitHub: [chimise](https://github.com/chimise)
 - Email: chimisepro@gmail.com
 
 2. Charles .i. Lughas
@@ -92,14 +93,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 - Email: anoliefoloveth1@gmail.com
 
 4. Benedict I. Odoh
-- GitHub: [benedict-ik](https://github.com/unrulee)
+- GitHub: [benedict-ik](https://github.com/benedict-ik)
 - Email: benedict.ik98@gmail.com
 
 5. Charles .E. Adah
 - GitHub: [charlesadah123](https://github.com/charlesadah123)
 - Email: charlesadah123@gmail.com
 
-6. Favour
+6. Favour K. Numonde
 - GitHub: [kurofavo](https://github.com/kurofavo)
 - Email: kurofavo@gmail.com
 
@@ -113,10 +114,10 @@ This project is licensed under the MIT License
 We sincerely appreciate our facilitator, [Mr Obinna Asiegbulam](https://github.com/andercelsius), for his tutelage and experience in guiding us through this angular course. With him, learning this course was worth every moment. In addition, we thank the entire [Elev8](https://elev8.com) for giving us this platform under FirstAcademy.
 
 ## Resources
-- [springboot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
-- [Elev8 springboot material](https://elev8.com)
 Angular Official Documentation: Angular Docs
 - [Angular HTTP Client: HTTP Client](https://angular.dev/overview)
 - [Angular Routing & Navigation: Angular Routing](https://angular.dev/guide/http)
 - [Using Angular Services: Angular Services](https://angular.dev/guide/router-tutorial)
 - [Bootstrap or Tachyons for Styling: Bootstrap](https://getboostrap.com) | [Tachyons](https://tachyons.io)
+
+- [Tailwind Css](https://tailwindcss.com/docs/)
