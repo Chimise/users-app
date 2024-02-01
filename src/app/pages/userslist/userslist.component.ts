@@ -1,12 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../components/container/container.component';
-import { SearchComponent, Search } from '../../components/search/search.component';
+import { SearchComponent } from '../../components/search/search.component';
 import { UserService } from '../../services/user/user.service';
 import { Subscription } from 'rxjs';
 import { User } from '../../models/user.model';
 import { UsercardComponent } from '../../components/usercard/usercard.component';
-import { Address } from '../../models/address.model';
 import { UsercardskeletonComponent } from '../../components/usercardskeleton/usercardskeleton.component';
+import { Search } from '../../models/search.model';
 
 @Component({
   selector: 'app-userslist',
@@ -40,7 +40,7 @@ export class UserslistComponent implements OnInit, OnDestroy {
       let isMatch = false;
 
       for (const filter of this.searchFilters) {
-        const userInfo = user[filter as 'email' | 'address' | 'name'];
+        const userInfo = user[filter as 'email' | 'address' | 'name' | 'username'];
 
         if (typeof userInfo === 'object') {
           isMatch = userInfo.city.toLowerCase().includes(this.searchValue.toLowerCase());
