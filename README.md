@@ -59,7 +59,6 @@ You need to have the following installed on your machine before setting up the a
 <div style="display: flex; justify-content: center;">
     <img src="./src/assets/img/homepage.png" alt="landing-page" style="width: 400px; height: 300px; margin-right: 10px;">
     <img src="./src/assets/img/user-details.png" alt="users-page" style="width: 400px; height: 300px; margin-right: 10px;">
-    <img src="./src/assets/img/user.png" alt="user" style="width: 400px; height: 300px; margin-right: 10px;"> 
     <img src="./src/assets/img/team-image.png" alt="user" style="width: 400px; height: 300px; margin-right: 10px;"> 
 </div>
 
