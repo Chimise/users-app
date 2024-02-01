@@ -1,0 +1,15 @@
+
+.design{
+    background: rgb(8, 22, 15);
+}
+.imgsrc {
+    width: 300px;
+    border: none;
+    transform: rotate(0deg);
+}
+.bg-custom-green {
+    background-color: rgb(8, 22, 15);
+}
+.text-custom-green {
+    color: rgb(48, 97, 71);
+}
