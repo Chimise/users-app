@@ -62,18 +62,11 @@ export class UserslistComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.subscriber = this.userService.getAllUsers().subscribe(
-      (users) => {
-        console.log(users);
-        this.users = users;
-      },
-      () => {
-        this.error = "An error an occurred, please try again";
-      },
-      () => {
-        this.loading = false;
-      }
-    )
+    this.subscriber = this.userService.getAllUsers().subscribe({
+      next: (users) => this.users = users,
+      error: () => this.error = "An error an occurred, please try again",
+      complete: () => this.loading = false
+    })
   }
 
 
