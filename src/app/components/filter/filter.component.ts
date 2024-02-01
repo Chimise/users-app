@@ -1,11 +1,8 @@
 import { NgClass } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Filter } from '../../models/filter.model';
 
-export interface FilterProps {
-  checked: boolean;
-  name: string;
-}
 
 @Component({
   selector: 'app-filter',
@@ -23,7 +20,7 @@ export class FilterComponent {
   isLast: boolean = false;
 
   @Output()
-  checkedChange: EventEmitter<FilterProps> = new EventEmitter();
+  checkedChange: EventEmitter<Filter> = new EventEmitter();
 
   @Input({ required: true })
   name!: string;
