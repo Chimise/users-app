@@ -9,8 +9,8 @@
             </div>
             <p class="pt-6 text-md font-medium text-accent">
                 This User App involves creating a personal landing page, user list and a user data page.
-                The features include developing a navigation bar and different views in Angular, 
-                fetching data from a RESTful API, managing and displaying user data effectively, 
+                The features include developing a navigation bar and different views in Angular,
+                fetching data from a RESTful API, managing and displaying user data effectively,
                 and implementing navigation between different views.
             </p>
             <div class="py-6 text-accent text-sm space-x-2">
@@ -36,7 +36,7 @@
     </app-container>
 </section>
 
-<app-container [class]="'w-[85%] mx-auto mt-14'">
+<app-container [class]="'mt-14'">
     <header class="text-center lg:mx-auto lg:w-[50%] space-y-3">
         <h2 class="text-3xl font-medium text-primary">Our Learnings</h2>
         <p>This is what we learnt from during the time spent building this project</p>
@@ -66,16 +66,15 @@
 
 <!--n-->
 <section class="py-12 bg-gray-300 mt-40">
-        <div class="max-w-7xl mx-auto px-8 py-4 space-y-16">
-            <h2 class="font-heading font-bold text-primary capitalize text-4xl text-center">
-                Meet the team
-            </h2>
-    
-            <div class="grid md:grid-cols-3 gap-16">
-                @for(team of teams; track team.githubLink) {
-                    <app-team-card [imageUrl]="team.imageUrl" [githubLink]="team.githubLink" [name]="team.name" />
-                }
-            </div>
-        </div>
-</section>
+    <div class="max-w-7xl mx-auto px-8 py-4 space-y-16">
+        <h2 class="font-heading font-bold text-primary capitalize text-4xl text-center">
+            Meet the team
+        </h2>
 
+        <div class="grid md:grid-cols-3 gap-16">
+            @for(team of teams; track team.githubLink) {
+            <app-team-card [imageUrl]="team.imageUrl" [githubLink]="team.githubLink" [name]="team.name" />
+            }
+        </div>
+    </div>
+</section>
