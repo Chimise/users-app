@@ -1,12 +1,10 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { FilterProps, FilterComponent } from '../filter/filter.component';
+import { FilterComponent } from '../filter/filter.component';
+import { Filter } from '../../models/filter.model';
+import { Search } from '../../models/search.model';
 
-export interface Search {
-  value: string;
-  filters: string[]
-}
 @Component({
   selector: 'app-search',
   standalone: true,
@@ -18,7 +16,7 @@ export class SearchComponent {
 
   isMenuVisible: boolean = false;
 
-  filters: FilterProps[] = [{ name: "name", checked: true }, { name: "email", checked: false }, { name: "username", checked: false }, { name: "address", checked: false }]
+  filters: Filter[] = [{ name: "name", checked: true }, { name: "email", checked: false }, { name: "username", checked: false }, { name: "address", checked: false }]
 
   @Input({ required: true })
   search!: string;
@@ -31,7 +29,7 @@ export class SearchComponent {
     this.searchChange.emit({ value, filters });
   }
 
-  handleFilterChange(newFilter: FilterProps) {
+  handleFilterChange(newFilter: Filter) {
     this.filters = this.filters.map(filter => {
       if (filter.name === newFilter.name) {
         return newFilter;
@@ -47,7 +45,7 @@ export class SearchComponent {
     this.isMenuVisible = !this.isMenuVisible;
   }
 
-  trackByFn(index: number, filter: FilterProps) {
+  trackByFn(index: number, filter: Filter) {
     return filter.name;
   }
 

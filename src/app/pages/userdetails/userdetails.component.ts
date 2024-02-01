@@ -7,11 +7,12 @@ import { ContainerComponent } from '../../components/container/container.compone
 import { UserDetailsCardComponent } from '../../components/user-details-card/user-details-card.component';
 import { UserCardPaperComponent } from '../../components/user-card-paper/user-card-paper.component';
 import { UserCompanyCardComponent } from '../../components/user-company-card/user-company-card.component';
+import { UserDetailsSkeletonComponent } from '../../components/user-details-skeleton/user-details-skeleton.component';
 
 @Component({
   selector: 'app-userdetails',
   standalone: true,
-  imports: [ContainerComponent, UserDetailsCardComponent, UserCardPaperComponent, UserCompanyCardComponent],
+  imports: [ContainerComponent, UserDetailsCardComponent, UserCardPaperComponent, UserCompanyCardComponent, UserDetailsSkeletonComponent],
   templateUrl: './userdetails.component.html',
   styleUrl: './userdetails.component.css'
 })
@@ -26,7 +27,6 @@ export class UserdetailsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params["id"];
-    console.log("id", this.id);
     this.subscription = this.userService.getUserById(this.id).subscribe({
       next: (user) => this.user = user,
       error: () => this.error = "An error occurred, please try again",

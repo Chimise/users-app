@@ -1,6 +1,6 @@
 <app-container class="pt-[100px]">
     @if(loading) {
-    <p>Loading data</p>
+    <app-user-details-skeleton />
     }@else if (error) {
     <p>An error occurred</p>
     }@else {

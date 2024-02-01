@@ -2,13 +2,13 @@
     <app-search [search]="searchValue" (searchChange)="handleSearchChange($event)" />
 </app-container>
 <app-container class="mt-20">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-14">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
         @if(loading) {
         @for(placeholder of placeholders; track $index) {
         <app-usercardskeleton />
         }
         }@else if (error) {
-        <div class="md:col-span-3 text-center py-5">
+        <div class="md:col-span-2 lg:col-span-3 text-center py-5">
             <p>{{error}}</p>
         </div>
         }@else{
@@ -16,7 +16,7 @@
         <app-usercard [user]="user" />
         }
         @empty {
-        <div class="md:col-span-3 text-center py-5">
+        <div class="md:col-span-2 lg:col-span-3 text-center py-5">
             <p>No User found</p>
         </div>
         }

@@ -1,0 +1,11 @@
+<div
+     [ngClass]="{'shadow-lg shadow-slate-800/20 bg-white lg:mt-8': isActive, 'px-8 space-y-12 py-10 min-h-[450px]': true}">
+    <div>
+        <ng-content>
+        </ng-content>
+    </div>
+    <div class="space-y-3">
+        <h6 class="text-primary font-semibold text-2xl">{{title}}</h6>
+        <p class="text-accent">{{description}}</p>
+    </div>
+</div>
