@@ -1,0 +1,8 @@
+<div
+     [ngClass]="{'flex items-center space-x-2 px-2 py-1 w-full border-b border-b-gray-400': true, 'border-none': isLast}">
+    <input type="checkbox" class="w-4 h-4 accent-indigo-700" [id]="name" [name]="name" [checked]="checked"
+           (change)="handleChange($event)" />
+    <label [for]="name" class="capitalize">
+        {{name}}
+    </label>
+</div>

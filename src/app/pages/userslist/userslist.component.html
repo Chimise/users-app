@@ -1,19 +1,24 @@
 <app-container [class]="'mt-8'">
-    <h1 class="mb-3">Users List</h1>
-    <app-search [(search)]="searchValue" />
+    <app-search [search]="searchValue" (searchChange)="handleSearchChange($event)" />
 </app-container>
-<app-container class="mt-20">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-14">
+<app-container class="my-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
         @if(loading) {
-        <p>Users fetching</p>
+        @for(placeholder of placeholders; track $index) {
+        <app-usercardskeleton />
+        }
         }@else if (error) {
-        <p>{{error}}</p>
+        <div class="md:col-span-2 lg:col-span-3 text-center py-5">
+            <p>{{error}}</p>
+        </div>
         }@else{
         @for (user of filterUsers(); track user.id) {
         <app-usercard [user]="user" />
         }
         @empty {
-        <p>No User found</p>
+        <div class="md:col-span-2 lg:col-span-3 text-center py-5">
+            <p>No User found</p>
+        </div>
         }
         }
     </div>
