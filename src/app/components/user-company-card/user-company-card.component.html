@@ -1,0 +1,20 @@
+<app-user-card-paper>
+    <div class="flex items-end space-x-5 mb-8">
+        <div class="inline-flex h-14 w-14 items-center justify-center bg-blue-900 text-white rounded-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                 stroke="currentColor"
+                 class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+        </div>
+        <div class="text-accent space-y-1">
+            <a class="text-2xl font-semibold" [href]="user.company.bs">{{user.company.name}}</a>
+            <h3 class="text-sm ">{{user.address.street}}, {{user.address.city}}</h3>
+        </div>
+    </div>
+    <div class="space-y-4">
+        <p class="font-bold text-2xl text-primary">About Company</p>
+        <p class="text-normal">{{user.company.catchPhrase}}. <span class="capitalize">{{user.company.bs}}</span></p>
+    </div>
+</app-user-card-paper>

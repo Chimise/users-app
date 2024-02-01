@@ -2,5 +2,6 @@ export const images = ["/assets/user-1.png", "/assets/user-2.png", "/assets/user
 
 
 export const getUserImage = (userId: number) => {
-    return images[userId - 1] || images[0];
+    const index = (userId - 1) % images.length;
+    return images[index]
 }
