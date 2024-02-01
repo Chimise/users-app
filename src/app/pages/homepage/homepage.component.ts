@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { SearchComponent } from '../../components/search/search.component';
 import { ContainerComponent } from '../../components/container/container.component';
+import { LearningCardComponent } from '../../components/learning-card/learning-card.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [ContainerComponent],
+  imports: [ContainerComponent, LearningCardComponent, RouterLink],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })
